@@ -6,7 +6,7 @@ const ChatAIHandler = async (text, msg) => {
     const cmd = text.split('/');
 
     if (cmd.length < 2) {
-        return msg.reply('Format Salah. ketik *#ask/your question*');
+        return msg.reply('Format Salah. ketik *#ask/pertanyaan kamu*');
     }
 
     msg.reply('sedang diproses, tunggu bentar ya.');
@@ -15,7 +15,7 @@ const ChatAIHandler = async (text, msg) => {
     const response = await ChatGPTRequest(question)
 
     if (!response.success) {
-        return msg.reply('Terjadi kesalahan.');
+        return msg.reply('Maaf Terjadi kesalahan.');
     }
 
     return msg.reply(response.data);
