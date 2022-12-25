@@ -2,7 +2,7 @@ const axios = require('axios');
 const { API_KEY_OPEN_AI } = require('../config');
 
 const ChatAIHandler = async (text, msg) => {
-
+//Fitur//
     const cmd = text.split('/');
 
     if (cmd.length < 2) {
