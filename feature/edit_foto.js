@@ -21,7 +21,7 @@ const EditPhotoHandler = async (text, msg) => {
             const newPhoto = await EditPhotoRequest(media.data, color)
 
             if (!newPhoto.success) {
-                return msg.reply('Terjadi kesalahan.');
+                return msg.reply('Maaf Terjadi kesalahan.');
             }
 
             const chat = await msg.getChat();
